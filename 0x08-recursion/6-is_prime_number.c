@@ -14,7 +14,7 @@ int is_prime_number(int n)
 		return (0);
 	}
 	return prime(n, n - 1);
-
+}
 /**
  * prime - function to check if a number is prime
  * @n: the number to check
