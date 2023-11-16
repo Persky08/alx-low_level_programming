@@ -13,7 +13,7 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	return (prime(n, n - 1));
+	return prime(n, n - 1);
 
 /**
  * prime - function to check if a number is prime
@@ -24,6 +24,7 @@ int is_prime_number(int n)
  */
 
 int prime(int n, int i)
+{
 
 	if (i == 1)
 	{
@@ -37,7 +38,7 @@ int prime(int n, int i)
 		}
 		else
 		{
-		return (prime(n, n - 1));
+		return prime(n, i - 1);
 		}
 	}
 }
