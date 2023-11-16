@@ -15,9 +15,10 @@ int is_prime_number(int n)
 	{
 		return (0);
 	}
-	return (prime(n, n - 1);
-/***
- * prime- function to check if a number is prime
+	return (prime(n, n - 1));
+
+/**
+ * prime - function to check if a number is prime
  * @n: the number to check
  * @i: iterator
  *
@@ -32,5 +33,5 @@ int prime(int n, int i)
 		{
 		return (0);
 		}
-		return (prime(n, n - 1)
+		return (prime(n, n - 1));
 }
