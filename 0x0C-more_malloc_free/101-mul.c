@@ -36,7 +36,7 @@ int is_digit(char *str)
  */
 int _atoi(char *str)
 {
-	int outcome = o;
+	int outcome = 0;
 
 	while (*str != '\0')
 	{
@@ -45,10 +45,10 @@ int _atoi(char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		result = result * 10 + (*str - '0');
+		outcome = outcome * 10 + (*str - '0');
 		str++;
 	}
-	return (result);
+	return (outcome);
 }
 
 /**
@@ -72,8 +72,8 @@ int multiply(char *str, char *str1)
 {
 	int x, y, results;
 
-	x = _atoi(char *str);
-	y = _atoi(char *str1);
+	x = _atoi(str);
+	y = _atoi(str1);
 	results = x * y;
 	return (results);
 }
@@ -84,16 +84,15 @@ int multiply(char *str, char *str1)
  *
  * Return: product of two numbers
  */
-int main(int argc, *char argv[])
+int main(int argc, char *argv[])
 {
 	int product;
 
-	if ((argc != 3) || !is_digit(argv[1] || !is_digit(argv[2]))
-			error();
-			product = (int *)malloc(sizeof(int);
-				if (product == NULL)
-				exit(1);
-			product = multiply(argv[1], argv[2]);
-			free(product);
-			printf("The product is %d\n", product);
-			}
+	if ((argc != 3) || !is_digit(argv[1]) || !is_digit(argv[2]))
+	{
+		errors();
+	}
+	product = multiply(argv[1], argv[2]);
+	printf("The product is %d\n", product);
+	return (0);
+}
