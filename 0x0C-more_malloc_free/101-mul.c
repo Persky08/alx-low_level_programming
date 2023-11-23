@@ -15,8 +15,10 @@ int is_digit(char *str)
 	while (str[i])
 	{
 		if (str[i] < '0' || str[i] > '9')
-			return (0),
-			       i++;
+		{
+			return (0);
+		}
+		i++;
 	}
 	return (1);
 }
@@ -24,7 +26,7 @@ int is_digit(char *str)
 /**
  * _strlen - find length of a string
  * @str: string in question
- * 
+ *
  * Return: 0.
  */
 int _strlen(char *str)
@@ -44,7 +46,7 @@ int _strlen(char *str)
 void errors(void)
 {
 	printf("Error\n");
-	exit (98);
+	exit(98);
 }
 /**
  * main - multiplies two positive numbers
