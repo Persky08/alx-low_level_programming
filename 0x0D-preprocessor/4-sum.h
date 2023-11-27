@@ -5,9 +5,10 @@
 
 /**
  * main - header file
- *
+ * @x: first number
+ * @y: second number
  * Return:0.
  */
-#define SUM(x, y) ((x) +(y))
+#define SUM(x, y) ((x) + (y))
 
 #endif
