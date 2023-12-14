@@ -9,10 +9,6 @@
 
 void print_binary(unsigned long int n)
 {
-	if (!n || n == '\0')
-	{
-		return;
-	}
 	if (n > 1)
 	{
 		/* Recursively print the binary representation of the quotient */
