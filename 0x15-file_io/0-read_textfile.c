@@ -11,7 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 	int file_descriptor;
 
-	if (filename == NULL || strlen(filename) == 0)
+	if (filename == NULL)
 		return (0);
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
