@@ -23,12 +23,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
                 return (0);
         }
         bytes_read = read(file_descriptor, buffer, letters);
-        if (bytes_read == -1)
-	{
-		free(buffer);
-		close(file_descriptor);
-                return (0);
-	}
+        if (bytes_read == -1){
+                free(buffer);
+                close(file_descriptor);
+                return (0);}
         written_bytes = write(STDOUT_FILENO, buffer, bytes_read);
         if (written_bytes == -1 || written_bytes != bytes_read)
         {
