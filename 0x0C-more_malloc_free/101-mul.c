@@ -5,8 +5,8 @@
 
 
 int is_digit(char *str);
-int _atoi(char *str);
-int multiply(char *str, char *str1);
+long long _atoi(char *str);
+long long multiply(char *str, char *str1);
 void errors(void);
 int _putchar(char c);
 
@@ -19,7 +19,7 @@ int _putchar(char c);
  */
 int main(int argc, char *argv[])
 {
-	int product;
+	long long product;
 
 	if ((argc != 3) || !is_digit(argv[1]) || !is_digit(argv[2]))
 	{
@@ -55,9 +55,9 @@ int is_digit(char *str)
  *
  * Return: integer
  */
-int _atoi(char *str)
+long long _atoi(char *str)
 {
-	int outcome = 0;
+	long long outcome = 0;
 
 	while (*str != '\0')
 	{
@@ -94,9 +94,9 @@ void errors(void)
  *
  * Return: integer
  */
-int multiply(char *str, char *str1)
+long long multiply(char *str, char *str1)
 {
-	int x, y, results;
+	long long x, y, results;
 
 	x = _atoi(str);
 	y = _atoi(str1);
@@ -117,3 +117,5 @@ int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+
