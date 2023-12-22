@@ -58,14 +58,10 @@ int main(int argc, char *argv[])
 	}
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
-	{
 		print_error(-1, 0, argv);
-	}
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	if (file_to == -1)
-	{
 		print_error(0, -1, argv);
-	}
 	while ((bytes_read = read(file_from, buffer, 1024)) > 0)
 	{
 		written_bytes = write(file_to, buffer, bytes_read);
