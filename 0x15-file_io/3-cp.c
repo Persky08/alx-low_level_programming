@@ -77,5 +77,6 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
+	print_error(file_from, file_to, argv);
 	return (0);
 }
