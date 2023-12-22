@@ -59,13 +59,12 @@ int main(int argc, char *argv[])
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Can't read from %s\n", argv[1]);
-		exit(98);
+		print_error(-1, 0, argv);
 	}
 	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
-		print_error(file_from, file_to, argv);
+		print_error(0, -1, argv);
 	}
 	while ((bytes_read = read(file_from, buffer, 1024)) > 0)
 	{
