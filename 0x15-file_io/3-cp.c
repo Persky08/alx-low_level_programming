@@ -9,7 +9,6 @@
  * Return: copy files
  */
 void print_error(int file_from, int file_to, char *argv[]);
-
 int main(int argc, char *argv[])
 {
 	int file_to, file_from;
@@ -40,7 +39,6 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 	}
-	print_error(file_from, file_to, argv);
 	return (0);
 }
 
