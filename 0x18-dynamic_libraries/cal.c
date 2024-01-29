@@ -1,4 +1,4 @@
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * add - a function that adds two numbers
@@ -22,7 +22,8 @@ int add(int a, int b)
  */
 int mul(int a, int b)
 {
-	return (a * 
+	return (a * b);
+}
 
 /**
  * mod - a function finds the mod two numbers
@@ -57,10 +58,7 @@ int sub(int a, int b)
  *
  * Return: a-b
  */
-int sub(int a, int b)
+int div(int a, int b)
 {
-	if (b != 0)
-	{
-		return (a / b);
-	}
+	return (a / b);
 }
